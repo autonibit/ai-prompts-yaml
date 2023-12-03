@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: basic-app-pod
+  labels:
+    app: basic-app
+spec:
+  containers:
+  - name: basic-app-container
+    image: <image_name>
+    ports:
+    - containerPort: 80
+

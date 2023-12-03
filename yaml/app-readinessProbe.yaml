@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: my-image
+    readinessProbe:
+      exec:
+        command:
+        - sh
+        - -c
+        - "command-to-check-if-container-is-ready"
+      initialDelaySeconds: 5
+      periodSeconds: 10
+
